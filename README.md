@@ -1,6 +1,6 @@
-# Technical Stair Calculator
+## Ballustrade Height Calculator
 
-A precision tool for architects, builders, and DIYers to calculate and visualize stair geometry with a CAD-inspired interface.
+Built for the use of MW Design Workshop to calculate the height of ballustrades according to their placement along the treads of a staircase.
 
 ## Features
 
@@ -43,27 +43,3 @@ The Technical Stair Calculator is built with modern web technologies:
 - **Baluster Setbacks**: Evenly distributed along the tread
 - **Baluster Heights**: Increase with distance from nosing due to the rake angle
 
-## Design Philosophy
-
-The interface is inspired by professional CAD software, with:
-
-- Minimalist, technical aesthetic
-- High contrast monochrome with blue highlights
-- Grid-based layout for precise alignment
-- Technical typography using IBM Plex Sans and Fira Code
-
-## Browser Compatibility
-
-The Technical Stair Calculator works in all modern browsers:
-- Chrome
-- Firefox
-- Safari
-- Edge
-
-## License
-
-MIT License
-
-## Version History
-
-- v1.0.0: Initial release with core functionality 
