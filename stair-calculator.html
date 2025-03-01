@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stair Tread, Balustrade, and Rail Calculator</title>
+    <link rel="stylesheet" href="stair-calculator.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Stair Tread, Balustrade, and Rail Calculator</h1>
+        <p>Adjust the dimensions to visualize different stair configurations.</p>
+        
+        <div class="calculator-container">
+            <div class="input-panel">
+                <h2>Input Dimensions</h2>
+                <div class="input-group">
+                    <label for="rise">Rise (inches):</label>
+                    <div class="input-controls">
+                        <input type="number" id="rise" step="0.125" value="6.625" min="5" max="8">
+                        <input type="range" id="riseSlider" min="5" max="8" step="0.125" value="6.625" class="slider">
+                    </div>
+                    <span class="fraction-display" id="riseFraction">(6 10/16)</span>
+                </div>
+                <div class="input-group">
+                    <label for="run">Run (inches):</label>
+                    <div class="input-controls">
+                        <input type="number" id="run" step="0.125" value="11" min="9" max="14">
+                        <input type="range" id="runSlider" min="9" max="14" step="0.125" value="11" class="slider">
+                    </div>
+                    <span class="fraction-display" id="runFraction">(11)</span>
+                </div>
+                <div class="input-group">
+                    <label for="railHeight">Rail Height (inches):</label>
+                    <div class="input-controls">
+                        <input type="number" id="railHeight" step="0.125" value="36.25" min="34" max="38">
+                        <input type="range" id="railHeightSlider" min="34" max="38" step="0.125" value="36.25" class="slider">
+                    </div>
+                    <span class="fraction-display" id="railHeightFraction">(36 4/16)</span>
+                </div>
+                <div class="input-group">
+                    <label for="balustersPerTread">Balusters Per Tread:</label>
+                    <div class="input-controls">
+                        <input type="number" id="balustersPerTread" min="1" max="5" value="3">
+                        <input type="range" id="balustersPerTreadSlider" min="1" max="5" step="1" value="3" class="slider">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="railThickness">Rail Thickness (inches):</label>
+                    <div class="input-controls">
+                        <input type="number" id="railThickness" step="0.125" value="1.5" min="1" max="3">
+                        <input type="range" id="railThicknessSlider" min="1" max="3" step="0.125" value="1.5" class="slider">
+                    </div>
+                    <span class="fraction-display" id="railThicknessFraction">(1 8/16)</span>
+                </div>
+                
+                <h3>Calculated Values</h3>
+                <div class="calculated-values">
+                    <div class="calc-group">
+                        <label>Rake Angle (degrees):</label>
+                        <span id="rakeAngle">31.06</span>
+                    </div>
+                    <div class="calc-group">
+                        <label>Net Baluster Height @ Nosing (inches):</label>
+                        <span id="netBalusterHeight">34.75</span>
+                        <span class="fraction-display" id="netBalusterHeightFraction">(34 12/16)</span>
+                    </div>
+                    <div class="calc-group">
+                        <label>Baluster Setback 1 (inches):</label>
+                        <span id="balusterSetback1">1.833</span>
+                        <span class="fraction-display" id="balusterSetback1Fraction">(1 13/16)</span>
+                    </div>
+                    <div class="calc-group">
+                        <label>Baluster Setback 2 (inches):</label>
+                        <span id="balusterSetback2">5.5</span>
+                        <span class="fraction-display" id="balusterSetback2Fraction">(5 8/16)</span>
+                    </div>
+                    <div class="calc-group">
+                        <label>Baluster Setback 3 (inches):</label>
+                        <span id="balusterSetback3">9.167</span>
+                        <span class="fraction-display" id="balusterSetback3Fraction">(9 3/16)</span>
+                    </div>
+                </div>
+                
+                <h3>Net Baluster Heights</h3>
+                <div class="baluster-heights" id="balusterHeightsContainer">
+                    <!-- Baluster heights will be dynamically generated based on the number of balusters -->
+                </div>
+                
+                <div class="controls-panel">
+                    <button id="printBtn" class="control-btn">Print</button>
+                </div>
+            </div>
+            
+            <div class="visualization-panel">
+                <h2>Stair Visualization</h2>
+                <div class="canvas-container">
+                    <canvas id="stairCanvas" width="816" height="1056"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="info-panel">
+            <h2>About Stair Calculations</h2>
+            <p>This calculator visualizes the relationship between stair dimensions, balustrades, and rails. The calculations follow standard building code requirements and best practices for stair construction.</p>
+            <p>Key relationships:</p>
+            <ul>
+                <li><strong>Rake Angle:</strong> Calculated as arctan(Rise/Run)</li>
+                <li><strong>Net Baluster Height:</strong> Rail height minus rail thickness</li>
+                <li><strong>Baluster Setbacks:</strong> Evenly distributed along the tread</li>
+                <li><strong>Net Baluster Heights:</strong> Increase with distance from nosing due to the rake angle</li>
+            </ul>
+            <p class="print-instructions">To print: Use Ctrl+P (Windows) or Cmd+P (Mac) and select "Landscape" orientation for best results.</p>
+        </div>
+    </div>
+
+    <script src="stair-calculator.js"></script>
+</body>
+</html> 
