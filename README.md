@@ -10,15 +10,6 @@ Built for the use of MW Design Workshop to calculate the height of ballustrades 
 - **Fraction Display**: View measurements in both decimal and fractional formats
 - **Print-Ready**: Generate technical drawings suitable for printing
 
-## Technical Details
-
-The Technical Stair Calculator is built with modern web technologies:
-
-- **HTML5**: Semantic structure for accessibility and clarity
-- **CSS3**: Grid-based layout with CAD-inspired styling
-- **JavaScript**: Canvas-based visualization and real-time calculations
-- **Responsive Design**: Adapts to different screen sizes
-
 ## Usage
 
 1. Adjust the input parameters using the sliders or direct input:
